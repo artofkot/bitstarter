@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'))
 var buffer = new Buffer(fs.readFileSync("index.html"),"utf-8");
 
 app.get('/', function(request, response) {
-  response.send(buffer.toString("utf-8", 0, 12))
+  response.send(buffer.toString("utf-8"))
 })
 
 app.listen(app.get('port'), function() {
