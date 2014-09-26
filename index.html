@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <!-- this doc is produced by following steps in very BIG pdf file fron Startup Engineering course, HomeWork4 --> 
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>My First Bitstarter</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
-
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+        <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
+        <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+        <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
         
         <!-- imho these fonts kinda suck. Artem-->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" type="text/css">
@@ -20,16 +23,16 @@
                 body{
                     padding-top: 60px;
                 }
-                .linediv-l{
+                .linediv-l {
                     border-right: 1px white solid;
                 }
-                .linediv-r{
+                .linediv-r {
                     border-left: 1px white solid;
                 }
             }
             
             /* Landcape phones and down */
-            @media (min-width: 480px) {
+            @media (max-width: 480px) {
                 .copy {
                     padding: 2.5% 10%;
                 }
@@ -86,6 +89,28 @@
                 color: white;
             }
 
+
+
+            /* Marketing Copy and Footer */
+            .copy {
+                padding-top: 2.5%;
+                padding-bottom: 2.5%;
+                text-align: justify;
+            }
+            .asset {
+                padding: 2.5% 0%;
+            }
+            .footer {
+                color: #cccccc;
+                text-align: center;
+            }
+            .footer p {
+                font-size: 11px;
+            }
+            .footer a {
+                color: #ccccff;
+            }
+
             /*         old styling for simple page  
             .navigation, .pitch, .section1, .section2, .faq, .footer {
                 padding: 10px 0px 10px 0px;
@@ -106,6 +131,7 @@
             */
         </style>
     </head>
+
     <body>
         <!-- Mobile-friendly navbar adapted from the -->
         <!-- example: Bootstrap starter template. -->
@@ -184,21 +210,95 @@
                             <div class="bar bar-warning" style="width: 40%;"></div>
                         </div>
                     </div>
-                    <div>
-                        
+                    
+                    <div class="span6 offset3 order">
+                        <!-- standart bootstrap button, twitter.github.io/bootstrap/base-css.html#buttons-->
+                        <button class="btn btn-success btn-large">Preorder</button>
                     </div>
-
+                    <div class="span8 offset2 social">
+                        <!-- social buttons are not included in default bootstrap, see noizwaves.github.io/bootstrap-social-buttons-->
+                        <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter </button>
+                        <button class="btn btn-facebook"> <i class="icon-facebook"></i> | Facebook</button>
+                    </div>
                 </div>
-
-
-
-
-
             </div>
 
+            <!-- Beyond this part the marketing copy bagins-->
+            <!-- in MDN Web/CSS/text-align-->
+            <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
+            <!-- http://placehold.it -->
             
+            <div class="row-fluid section1">
+                <div class="span5 offset1 asset">
+                    <img class="img-polaroid" src="http://placehold.it/480x300">
+                </div>
+                <div class="span5 copy">
+                    <p>
+                        This guy is horrendously awesome. 
+                    </p>
+                </div>
+            </div>
+
+            <div class="row-fluid section2">
+                <div class="span5 offset1 copy copy-right">
+                    <p>
+                        You must buy it 
+                    </p>
+                </div>  
+                <div class="span5 asset">
+                    <img class="img-polaroid" src="http://placehold.it/480x300">
+                </div>
+            </div>
 
 
+            <!-- For the FAQ, we introduce a little bit of JS, using accordion-->
+            <!-- this brings jquery.js and bootstrap.js as dependencies-->
+            <!-- twitter.github.io/bootstrap/javascript.html#collaps -->
+            <div class="row-fluid faq">
+                <div class="span10 offset1">
+                    <h3>FAQ</h3>
+                    <div class="accordion" id="accordion2">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                    What does FAQ stand for?
+                                </a>
+                            </div>
+                            <div id="collapseOne" class="accordion-body collapse">
+                                <div class="accordion-inner">
+                                    Frequently Asked Question.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                    What's a Frequently Asked Question?
+                                </a>
+                            </div>
+                            <div id="collapseTwo" class="accordion-body collapse">
+                                <div class="accordion-inner">
+                                    A question which is commonly asked by users.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+            <!-- Bot crucial, but we put this under a CC By-SA 3.0 license-->
+            <!-- http://creativecommons.org/licenses/ -->
+            <div class="row-fluid footer">
+                <div class="span12">
+                    <p>
+                        This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a>, without all the cruft that would otherwise be put at the bottom of the page.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
             <!-- old simple page
             <div class="row navigation">
                 <div class="span2 logo">
@@ -257,6 +357,3 @@
                     Footer
                 </div>
             </div> -->
-        </div>
-    </body>
-</html>
