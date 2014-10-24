@@ -14,16 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-sample"
+    // "url": "https://github.com/heroku/node-js-sample"
   },
   "keywords": [
     "node",
     "heroku",
     "express"
   ],
-  "author": "Mark Pundsack",
+  // "author": "Mark Pundsack",
   "contributors": [
-    "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)"
+    // "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)",
+    "Artem Kotelskiy <artofkot@gmail.com>",
+    "Alexey Levin <alexej.levin@gmail.com"
   ],
   "license": "MIT"
 }
