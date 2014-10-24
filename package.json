@@ -7,23 +7,20 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "4.0.0"
+    "express": "^4.0.0"
   },
   "engines": {
     "node": "0.10.x"
   },
   "repository": {
-    "type": "git",
-    // "url": "https://github.com/heroku/node-js-sample"
-  },
+    "type": "git"
+    },
   "keywords": [
     "node",
     "heroku",
     "express"
   ],
-  // "author": "Mark Pundsack",
   "contributors": [
-    // "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)",
     "Artem Kotelskiy <artofkot@gmail.com>",
     "Alexey Levin <alexej.levin@gmail.com"
   ],
