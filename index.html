@@ -161,6 +161,14 @@
                 border: 1px solid;
             }
             */
+            
+
+
+            /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
+            div.addthis_toolbox {
+              width:180px;
+              margin: 0 auto;
+            }
         </style>
     </head>
 
@@ -391,6 +399,10 @@
                         <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter </button>
                         <button class="btn btn-facebook"> <i class="icon-facebook"></i> | Facebook</button>
                     </div>
+                    <div class="span8 offset2 social" style="padding-top:5px">
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_sharing_toolbox"></div>
+                    </div>
                 </div>
             </div>
 
@@ -526,5 +538,9 @@
           ga('create', 'UA-55884725-2', 'auto');
           ga('send', 'pageview');
         </script>
+        
+        <!-- Share buttons scripts. Go to www.addthis.com/dashboard to customize your tools -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54653281415f1aba" async="async"></script>
+
     </body>
 </html>
